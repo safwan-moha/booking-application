@@ -1,0 +1,5 @@
+{
+  "backend_url": "http://18.191.138.76:8000/",
+  "base_username":"user",
+  "base_password":"pass"
+}
