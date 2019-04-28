@@ -1,0 +1,104 @@
+CREATE TABLE `user` (
+	`id` INT NOT NULL AUTO_INCREMENT,
+	`username` VARCHAR(30) NOT NULL UNIQUE,
+	`type` VARCHAR(30) NOT NULL,
+	`email` VARCHAR(30) NOT NULL,
+	`password_hash` VARCHAR(300) NOT NULL,
+	`password_salt` VARCHAR(300) NOT NULL,
+	`created_date` DATE,
+	PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `seller` (
+	`id` INT NOT NULL AUTO_INCREMENT,
+	`user_id` INT NOT NULL UNIQUE,
+	`rating` INT,
+	`location` VARCHAR(30) NOT NULL,
+	`response_time` INT NOT NULL,
+	PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `buyer` (
+	`id` INT NOT NULL AUTO_INCREMENT,
+	`user_id` INT NOT NULL UNIQUE,
+	`preference` VARCHAR(30) NOT NULL,
+	`is_active` VARCHAR(30) NOT NULL,
+	PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `appointment` (
+	`id` INT NOT NULL AUTO_INCREMENT,
+	`buyer_id` INT NOT NULL,
+	`seller_id` INT NOT NULL,
+	`date_booking` DATE,
+	`time_booking` VARCHAR(30) NOT NULL,
+	`is_completed` VARCHAR(30) NOT NULL,
+	PRIMARY KEY (`id`)
+);
+
+ALTER TABLE appointment
+ALTER COLUMN `is_completed` VARCHAR(30);
+
+INSERT INTO user (username, type, email, password_hash, password_salt, created_date)
+VALUES ('Bella', 'BUYER', 'john@example.com', '428F02B57159902FB5049A23C71FA5EDCE9650535FB90B1849DB4E7802CB78BA', 'qWSegsx', '2019-04-23');
+
+INSERT INTO user (username, type, email, password_hash, password_salt, created_date)
+VALUES ('Sara', 'SELLER', 'john@example.com', '428F02B57159902FB5049A23C71FA5EDCE9650535FB90B1849DB4E7802CB78BA', 'qWSegsx', '2019-04-23');
+
+INSERT INTO user (username, type, email, password_hash, password_salt, created_date)
+VALUES ('Beth', 'BUYER', 'john@example.com', '428F02B57159902FB5049A23C71FA5EDCE9650535FB90B1849DB4E7802CB78BA', 'qWSegsx', '2019-04-23');
+
+INSERT INTO user (username, type, email, password_hash, password_salt, created_date)
+VALUES ('Sofia', 'SELLER', 'john@example.com', '428F02B57159902FB5049A23C71FA5EDCE9650535FB90B1849DB4E7802CB78BA', 'qWSegsx', '2019-04-24');
+
+INSERT INTO user (username, type, email, password_hash, password_salt, created_date)
+VALUES ('Stephen', 'SELLER', 'john@example.com', '428F02B57159902FB5049A23C71FA5EDCE9650535FB90B1849DB4E7802CB78BA', 'qWSegsx', '2019-04-23');
+
+INSERT INTO user (username, type, email, password_hash, password_salt, created_date)
+VALUES ('Seth', 'SELLER', 'john@example.com', '428F02B57159902FB5049A23C71FA5EDCE9650535FB90B1849DB4E7802CB78BA', 'qWSegsx', '2019-04-23');
+
+INSERT INTO user (username, type, email, password_hash, password_salt, created_date)
+VALUES ('Sergio', 'SELLER', 'john@example.com', '428F02B57159902FB5049A23C71FA5EDCE9650535FB90B1849DB4E7802CB78BA', 'qWSegsx', '2019-04-23');
+
+INSERT INTO user (username, type, email, password_hash, password_salt, created_date)
+VALUES ('Samson', 'SELLER', 'john@example.com', '428F02B57159902FB5049A23C71FA5EDCE9650535FB90B1849DB4E7802CB78BA', 'qWSegsx', '2019-04-23');
+
+INSERT INTO user (username, type, email, password_hash, password_salt, created_date)
+VALUES ('Samir', 'SELLER', 'john@example.com', '428F02B57159902FB5049A23C71FA5EDCE9650535FB90B1849DB4E7802CB78BA', 'qWSegsx', '2019-04-23');
+
+INSERT INTO user (username, type, email, password_hash, password_salt, created_date)
+VALUES ('Sonny', 'SELLER', 'john@example.com', '428F02B57159902FB5049A23C71FA5EDCE9650535FB90B1849DB4E7802CB78BA', 'qWSegsx', '2019-04-23');
+
+INSERT INTO user (username, type, email, password_hash, password_salt, created_date)
+VALUES ('Salem', 'SELLER', 'john@example.com', '428F02B57159902FB5049A23C71FA5EDCE9650535FB90B1849DB4E7802CB78BA', 'qWSegsx', '2019-04-23');
+
+INSERT INTO appointment (buyer_id, seller_id, date_booking, time_booking, is_completed)
+VALUES (4, 4, 'West Bay', 15);
+
+INSERT INTO seller (user_id, rating, location, response_time)
+VALUES (4, 4, 'West Bay', 15);
+
+INSERT INTO seller (user_id, rating, location, response_time)
+VALUES (2, 3, 'Al Waab', 20);
+
+
+INSERT INTO seller (user_id, rating, location, response_time)
+VALUES (5, 3, 'Al Khor', 12);
+
+INSERT INTO seller (user_id, rating, location, response_time)
+VALUES (6, 3, 'Doha', 5);
+
+INSERT INTO seller (user_id, rating, location, response_time)
+VALUES (7, 3, 'Madinat Khalifa', 20);
+
+INSERT INTO seller (user_id, rating, location, response_time)
+VALUES (8, 4, 'Al Wakra', 25);
+
+INSERT INTO seller (user_id, rating, location, response_time)
+VALUES (9, 3, 'Al Waab', 20);
+
+INSERT INTO seller (user_id, rating, location, response_time)
+VALUES (10, 5, 'Abu Hamour', 10);
+
+INSERT INTO seller (user_id, rating, location, response_time)
+VALUES (11, 5, 'Al Wakra', 50);

@@ -1,0 +1,18 @@
+to server
+web: 18.223.123.7
+api: http://18.191.138.76:3000/12
+curl http://localhost:3000/123
+
+scp -r -i safwan-rnd-key.pem ../backend-api/index.js ubuntu@18.191.138.76:/home/ubuntu/backend-api
+scp -r -i safwan-rnd-key.pem ../backend-api/app ubuntu@18.191.138.76:/home/ubuntu/backend-api
+
+ssh -i "safwan-rnd-key.pem" ubuntu@18.191.138.76
+
+
+in server
+sudo apt-get install mysql-server
+sudo apt install nodejs npm
+npm install
+node index.js
+
+node forever: http://garrows.com/blog/install-and-setup-node-js-to-run-forever/
