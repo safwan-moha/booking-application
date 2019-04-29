@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "tazweed_app",
+    "name": "Tazweed App",
     "description": "This project is tazweed mobile app for appointment booking",
     "slug": "tazweed_app",
     "privacy": "public",
@@ -9,6 +9,9 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/img/logo.png",
+    "android": {
+      "package": "com.safwan.tazweed"
+    },
     "splash": {
       "image": "./assets/img/logo.png",
       "resizeMode": "contain",
