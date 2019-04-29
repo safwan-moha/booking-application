@@ -1,12 +1,10 @@
-# booking-application
-A sample booking application with web-app, mobile-app and backend-api
+# Booking Application
+A sample booking application with web-app, mobile-app and backend-api. UI ilustration of the running app are attached below
+![alt text](https://raw.githubusercontent.com/safwan-moha/booking-application/master/docs/Mobile-app.jpg "Mobile View")
+![alt text](https://raw.githubusercontent.com/safwan-moha/booking-application/master/docs/Web-app.jpg "Web View")
 
 
-![alt text](https://raw.githubusercontent.com/safwan-moha/booking-application/master/docs/Mobile-app.jpg)
-
-![alt text](https://raw.githubusercontent.com/safwan-moha/booking-application/master/docs/Web-app.jpg)
-
-
+# Implementation detials
 - Backend: Node/Express
     - API for mobile and web to interact with
     - Also connects to MYSQL database
